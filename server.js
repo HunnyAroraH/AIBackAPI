@@ -4,9 +4,9 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 // 🔐 ElevenLabs Config
-const ELEVENLABS_API_KEY = 'sk_c3c1300293c6679452dfacefde3ceb9fb068917c78362004';
-const AGENT_ID = 'agent_2601k1c1dsp6fkcanmeavs1trs8d';
-const AGENT_PHONE_NUMBER_ID = 'phnum_9601k2279n6fe1kvva6j14s747ae';
+const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
+const AGENT_ID = process.env.ELEVENLABS_AGENT_ID;
+const AGENT_PHONE_NUMBER_ID = process.env.ELEVENLABS_AGENT_PHONE_NUMBER_ID;
 
 // 🧠 In-memory lead storage
 const leads = {};
