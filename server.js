@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
 
 // 🔐 ElevenLabs Config
 const ELEVENLABS_API_KEY = 'sk_c3c1300293c6679452dfacefde3ceb9fb068917c78362004';
@@ -103,6 +103,6 @@ app.post('/getClientInfo', (req, res) => {
 /**
  * 🚀 Start server
  */
-app.listen(port, () => {
-  console.log(`⚡ Server running at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`⚡ Server running at http://0.0.0.0:${port}`);
 });
